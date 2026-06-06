@@ -24,9 +24,8 @@ export async function POST(request: NextRequest) {
 
         const page = await browser.newPage();
 
-        const baseUrl = process.env.VERCEL_URL
-            ? `https://${process.env.VERCEL_URL}`
-            : `http://localhost:${process.env.PORT || 3000}`;
+        const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+            || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`);
 
         await page.goto(`${baseUrl}/`, {
             waitUntil: 'networkidle0',
