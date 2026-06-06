@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
             document.body.classList.add('pdf-mode');
             const container = document.querySelector('.container') as HTMLElement;
             if (container) {
-                container.style.cssText = 'column-count: 2; column-gap: 3rem; column-fill: auto;';
+                container.style.cssText = '';
             }
             const pdfButtons = document.querySelectorAll('.pdf-download-button, .pdf-link-button');
             pdfButtons.forEach(button => {
