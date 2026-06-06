@@ -682,9 +682,7 @@ body {
 
 /* PDF 모드에서 컨테이너 조정 (성경책처럼 2열 텍스트 흐름) */
 .pdf-mode .container {
-  column-count: 2;
-  column-gap: 3rem;
-  column-fill: auto;
+  column-count: 1;
   max-width: none;
   padding: 10px;
   margin: 0;
